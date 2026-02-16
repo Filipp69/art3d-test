@@ -1,0 +1,47 @@
+@use "../variables" as *;
+
+.legend {
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 13px;
+        opacity: 0.6;
+        cursor: pointer;
+        margin-bottom: 16px;
+        transition: $transition;
+        font-size: $text-16;
+
+        &.active {
+            opacity: 1;
+
+            .legend__text::after {
+                width: 100%;
+            }
+        }
+
+        &.pink .legend__text::after { background: $color-pink; }
+        &.green .legend__text::after { background: $color-green; }
+        &.gray .legend__text::after { background: $color-grey; }
+    }
+  
+    &__color {
+        width: 14px;
+        height: 14px;
+    }
+
+    &__text {
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            height: 1px;
+            width: 0;
+            transition: $transition;
+        }
+    }    
+}
+  
+  

@@ -1,0 +1,19 @@
+.chart {
+    position: relative;
+    width: 514px;
+    height: 514px;
+
+    &__img {
+        width: 100%;
+        display: block;
+    }
+
+    &__svg {
+        position: absolute;
+        inset: 0;
+        path {
+            transition: opacity .25s ease;
+            cursor: pointer;
+        }
+    }
+}

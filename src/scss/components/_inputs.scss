@@ -1,0 +1,47 @@
+@use '../variables' as *;
+
+.ui-input {
+    position: relative;
+    margin-bottom: 3.2rem;
+
+    &.is-error {
+        input{
+            border-color: $color-red;
+            color: $color-red;
+        }
+    }
+
+    input {
+        width: 100%;
+        background: none;
+        border: none;
+        border-bottom: 1px solid rgba($color-beige, .5);
+        color: $color-beige;
+        padding: 0 0 1.4rem;
+        font-size: $text-14;
+        outline: none;
+        transition: border-color $transition;
+
+        &::placeholder {
+            color: $color-beige;
+            font-size: $text-14;
+        }
+
+        &:focus {
+            border-color: $color-beige;
+        }
+    }
+
+    &__error {
+        position: absolute;
+        color: $color-red;
+        font-size: $text-12;
+        margin-top: .5rem;
+    }
+
+    span {
+        display: block;
+        font-size: $text-14;
+        position: relative;
+    }
+}

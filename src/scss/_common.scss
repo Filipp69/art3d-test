@@ -1,0 +1,58 @@
+@use "variables" as *;
+
+html {
+  box-sizing: border-box;
+  font-size: $mainFontSize;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+p,
+h1,
+h2,
+li,
+ul {
+    margin: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    font-family: $GheaGrapalat;
+    line-height: 1.5;
+}
+
+::-webkit-scrollbar {
+    width: 0.7rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: $color-primary;
+}
+
+.page {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 2.3rem;
+}
